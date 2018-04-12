@@ -1,5 +1,6 @@
 - label: "build"
   command:
+    - make clean
     - pip install -r requirements
     - make docs
   plugins:
