@@ -4,6 +4,7 @@ BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND)
 
 # if we are in CI we need to add python's binpath:
 export PATH := $(shell hab pkg path core/python2)/bin:$(PATH)
+export LANG := en_US.UTF-8
 
 prepare:
 	pip install -r requirements.txt
