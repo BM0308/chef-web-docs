@@ -3,7 +3,7 @@ BUILD_COMMAND = sphinx-build -a -W
 BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND)
 
 # if we are in CI we need to add python's binpath:
-export PATH := $(shell hab pkg python2)/bin:$(PATH)
+export PATH := $(shell hab pkg core/python2)/bin:$(PATH)
 
 prepare:
 	pip install -r requirements.txt
