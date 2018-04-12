@@ -2,6 +2,9 @@ BUILDDIR = build
 BUILD_COMMAND = sphinx-build -a -W
 BUILD_COMMAND_AND_ARGS = $(BUILD_COMMAND)
 
+prepare:
+	pip install -r requirements.txt
+
 docs:
 	mkdir -p $(BUILDDIR)
 	cp -r misc/robots.txt build/

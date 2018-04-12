@@ -1,8 +1,10 @@
 - label: "build"
   command:
     - make clean
-    - pip install -r requirements.txt
+	  - make prepare
     - make docs
+  env:
+    PATH:"$PATH:$(shell hab pkg path core/python2)/bin"
   plugins:
     docker#v1.1.1:
       image: "chefes/buildkite"
