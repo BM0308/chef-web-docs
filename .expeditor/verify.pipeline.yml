@@ -1,7 +1,7 @@
 - label: "build"
   command:
     - make clean
-	  - make prepare
+    - make prepare
     - make docs
   env:
     PATH:"$PATH:$(shell hab pkg path core/python2)/bin"
